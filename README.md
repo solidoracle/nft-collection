@@ -6,7 +6,7 @@ An NFT collection on Rinkeby for degens that love good art!
 ## Whitelist
 
 To pre-mint a galactic ape you first need to enter the whitelist at the following link:
-https://whitelist-dapp-two-fawn.vercel.app/
+https://whitelist-dapp-lime-seven.vercel.app/
 
 
 ## Deployment

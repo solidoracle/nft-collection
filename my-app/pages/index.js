@@ -368,7 +368,7 @@ export default function Home() {
         <div>
           <h1 className={styles.title}>Welcome to Galactic Apes!</h1>
           <div className={styles.description}>
-            It's an NFT collection for degens that love good art!
+            Its an NFT collection for degens that love good art!
           </div>
           <div className={styles.description}>
             {tokenIdsMinted}/20 have been minted
