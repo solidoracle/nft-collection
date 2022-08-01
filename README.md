@@ -15,7 +15,7 @@ https://whitelist-dapp-lime-seven.vercel.app/
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
 
-Remember to paste your stakig contract number in the App.js file in Client
+Remember to paste your contract number and abi in the constants/index.js in my-app
 
 
 ## Start Front End
