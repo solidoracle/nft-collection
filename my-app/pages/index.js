@@ -45,7 +45,7 @@ export default function Home() {
       // wait for the transaction to get mined
       await tx.wait();
       setLoading(false);
-      window.alert("You successfully minted a Crypto Dev!");
+      window.alert("You successfully minted a Galactic Ape!");
     } catch (err) {
       console.error(err);
     }
@@ -75,7 +75,7 @@ export default function Home() {
       // wait for the transaction to get mined
       await tx.wait();
       setLoading(false);
-      window.alert("You successfully minted a Crypto Dev!");
+      window.alert("You successfully minted a Galactic Ape!");
     } catch (err) {
       console.error(err);
     }
@@ -338,7 +338,7 @@ export default function Home() {
         <div>
           <div className={styles.description}>
             Presale has started!!! If your address is whitelisted, Mint a
-            Crypto Dev 🥳
+            Galactic Ape 🌌🦍🪐
           </div>
           <button className={styles.button} onClick={presaleMint}>
             Presale Mint 🚀
@@ -360,15 +360,15 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Crypto Devs</title>
+        <title>Galactic Apes</title>
         <meta name="description" content="Whitelist-Dapp" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/ape.png" />
       </Head>
       <div className={styles.main}>
         <div>
-          <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
+          <h1 className={styles.title}>Welcome to Galactic Apes!</h1>
           <div className={styles.description}>
-            Its an NFT collection for developers in Crypto.
+            Its an NFT collection for degens that love good art!
           </div>
           <div className={styles.description}>
             {tokenIdsMinted}/20 have been minted
@@ -376,12 +376,12 @@ export default function Home() {
           {renderButton()}
         </div>
         <div>
-          <img className={styles.image} src="./cryptodevs/0.svg" />
+          <img className={styles.image} src="./galactic-apes/0.png" />
         </div>
       </div>
 
       <footer className={styles.footer}>
-        Made with &#10084; by Crypto Devs
+        Made with &#10084; by solidoracle
       </footer>
     </div>
   );
