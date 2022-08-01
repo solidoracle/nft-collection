@@ -1,5 +1,5 @@
 
-# GALACTIC APE NFT COLLECTION
+# GALACTIC APE NFT COLLECTION 🌌🦍🪐
 
 An NFT collection on Rinkeby for degens that love good art!
 
