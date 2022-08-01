@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "../node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
 import "./IWhitelist.sol";
 
 contract CryptoDevs is ERC721Enumerable, Ownable {
@@ -18,7 +18,7 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
     // _paused is used to pause the contract in case of an emergency
     bool public _paused;
 
-    // max number of CryptoDevs
+    // max number of Galactic Apes
     uint256 public maxTokenIds = 20;
 
     // total number of tokenIds minted
@@ -40,11 +40,11 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
 
     /**
      * @dev ERC721 constructor takes in a `name` and a `symbol` to the token collection.
-     * name in our case is `Crypto Devs` and symbol is `CD`.
-     * Constructor for Crypto Devs takes in the baseURI to set _baseTokenURI for the collection.
+     * name in our case is `Galactic Apes` and symbol is `GA`.
+     * Constructor for Galactic Apes takes in the baseURI to set _baseTokenURI for the collection.
      * It also initializes an instance of whitelist interface.
      */
-    constructor (string memory baseURI, address whitelistContract) ERC721("Crypto Devs", "CD") {
+    constructor (string memory baseURI, address whitelistContract) ERC721("Galactic Apes", "GA") {
         _baseTokenURI = baseURI;
         whitelist = IWhitelist(whitelistContract);
     }
@@ -65,7 +65,7 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
     function presaleMint() public payable onlyWhenNotPaused {
         require(presaleStarted && block.timestamp < presaleEnded, "Presale is not running");
         require(whitelist.whitelistedAddresses(msg.sender), "You are not whitelisted");
-        require(tokenIds < maxTokenIds, "Exceeded maximum Crypto Devs supply");
+        require(tokenIds < maxTokenIds, "Exceeded maximum Galactic Apes supply");
         require(msg.value >= _price, "Ether sent is not correct");
         tokenIds += 1;
         //_safeMint is a safer version of the _mint function as it ensures that
@@ -79,7 +79,7 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
     */
     function mint() public payable onlyWhenNotPaused {
         require(presaleStarted && block.timestamp >=  presaleEnded, "Presale has not ended yet");
-        require(tokenIds < maxTokenIds, "Exceed maximum Crypto Devs supply");
+        require(tokenIds < maxTokenIds, "Exceed maximum Galactic Apes supply");
         require(msg.value >= _price, "Ether sent is not correct");
         tokenIds += 1;
         _safeMint(msg.sender, tokenIds);
